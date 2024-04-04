@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Component, { Sample } from './component/Component';
 import SignInContainer from './component/example/SignInContainer';
+// import CurlyBraces from './component/CurlyBraces';
+
+
 
 // JSX / TSX :
 // JSX (JavaScript XML) / TSX (TypeScript XML)
@@ -73,7 +76,9 @@ function App() {
       <FunctionComponent/> */}
       {/* <Component />
       <Sample /> */}
-      <SignInContainer/>
+      {/* <SignInContainer/> */}
+      {/* <CurlyBraces /> */}
+      {/* <Properties /> */}
     </div>
   );
 }
