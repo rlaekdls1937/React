@@ -5,6 +5,8 @@ import SignInContainer1 from './component/example/SignInContainer';
 import SignInContainer from './component_manage/example/SignInContainer';
 import ConditionalRendering from './component_manage/example/ConditionalRendering';
 import ListRendering from './component_manage/ListRendering';
+import EventComponent from './interaction/EventComponent';
+import StateComponent from './interaction/StateComponent';
 
 // import CurlyBraces from './component/CurlyBraces';
 
@@ -80,12 +82,13 @@ function App() {
       <FunctionComponent/> */}
       {/* <Component />
       <Sample /> */}
-      <SignInContainer/>
+      {/* <SignInContainer/> */}
       {/* <CurlyBraces /> */}
       {/* <Properties /> */}
       {/* <ConditionalRendering/> */}
       {/* <ListRendering /> */}
-      
+      {/* <EventComponent/> */}
+      <StateComponent/>
     </div>
   );
 }
