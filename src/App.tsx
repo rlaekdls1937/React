@@ -7,6 +7,8 @@ import ConditionalRendering from './component_manage/example/ConditionalRenderin
 import ListRendering from './component_manage/ListRendering';
 import EventComponent from './interaction/EventComponent';
 import StateComponent from './interaction/StateComponent';
+import ForwordingStateComponent from './interaction/ForwordingStateComponent';
+import HookComponent2 from './hook/HookComponent2';
 
 // import CurlyBraces from './component/CurlyBraces';
 
@@ -88,7 +90,10 @@ function App() {
       {/* <ConditionalRendering/> */}
       {/* <ListRendering /> */}
       {/* <EventComponent/> */}
-      <StateComponent/>
+      {/* <StateComponent/> */}
+      {/* <ForwordingStateComponent/> */}
+      {/* <HookComponent1 /> */}
+      <HookComponent2 />
     </div>
   );
 }
