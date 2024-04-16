@@ -9,6 +9,7 @@ import EventComponent from './interaction/EventComponent';
 import StateComponent from './interaction/StateComponent';
 import ForwordingStateComponent from './interaction/ForwordingStateComponent';
 import HookComponent2 from './hook/HookComponent2';
+import CustomHook from './hook/CustomHook';
 
 // import CurlyBraces from './component/CurlyBraces';
 
@@ -93,7 +94,8 @@ function App() {
       {/* <StateComponent/> */}
       {/* <ForwordingStateComponent/> */}
       {/* <HookComponent1 /> */}
-      <HookComponent2 />
+      {/* <HookComponent2 /> */}
+      <CustomHook/>
     </div>
   );
 }
