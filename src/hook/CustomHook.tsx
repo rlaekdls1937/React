@@ -5,6 +5,50 @@ import React, { useEffect, useRef, useState } from 'react'
 // - 함수명을 use로 시작하게 작성하여 커스텀 훅 함수를 만들 수 있음
 // - 커스텀 훅 함수에는 다른 훅 함수를 포함할 수 있음
 
+// 107 게시물
+
+// 한 페이지 게시물 5개씩 보여줌
+// 페이지네이션을 한 섹션당 10개를 보여줌
+
+// 총 페이지 수 :  22
+// totalPageCount = boardCount / 5
+// if (pageCount % 5 !== 0) totalPageCount ++;
+
+// 자바인 경우  Math.floor 생략 가능
+// totalPageCount = Math.floor((boardCount -1) / 5) + 1
+// totalSectionCount = Math.floor((totalPageCount -1) / 10) + 1
+// totalSectionCount = Math.floor((boardCount -1) / (5*10)) + 1
+// 총 섹션 수 : 3
+
+// [a0, a1, a2, a3, a4, a5, a6, a7 ..., a104, a105, a106]
+// 1 = [a0 ~ a4]
+// 2 = [a5 ~ a9]
+// 3 = [a10 ~ a14]
+// ...
+// 21 = [a100 ~ a104]
+// 22 = [a105 ~ a106]
+
+// currentPageStart = 5(page - 1)
+// currentPageEnd = 5*page - 1
+
+// viewList = [];
+// for (index = currentPageStart; index <= currentPageEnd; index++;)
+//  if (index => boardList.length) break;
+//  viewList.push(boardList[index])
+
+// 1   1   10   
+// 2   11  20
+// 3   21  30
+// 4   31  40
+
+// currentSectionStart = 10 * section - 9
+// currentSectionEnd = 10 * section 
+
+// viewPageList = []
+// for (index = currentSectionStart; index <= currentSectionEnd; ++)
+//    if (totalPage < index) break;
+//    viewPageList.push(index)
+
 function usePagination(totalList: string[]) {
     const [page, setPage] = useState<number>(1);
     const [section, setSection] = useState<number>(1);
