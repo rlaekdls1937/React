@@ -5,7 +5,7 @@ export default function HookComponent2() {
     const [image, setImage] = useState<string>('');
     // useRef :
     // - DOM 객체를 직접 다루고자 할 때 혹은 렌더링 없이 값을 변경 저장하고자 할 때 사용
-    // const Dom객체참조변수 = useRef<DOM요소타입>();
+    // const Dom객체참조변수 = useRef<DOM요소타입>(초기값);
     // DOM 객체를 참조하기 위해서 useRef를 사용하면 참조할 요소의 ref={} 속성에 해당 참조 변수를 지정해야함
     const inputRef = useRef<HTMLInputElement>(null);    // inputRef => HTMLInputElement | null
 
@@ -20,7 +20,7 @@ export default function HookComponent2() {
         if(inputRef.current) inputRef.current.focus();
         
     };
-
+    // 이미지 미리보기
     const onInputChangeHandler = () => {
         const { current } = inputRef;
         if (!current) return;
